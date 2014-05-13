@@ -100,7 +100,7 @@
 		}
 		
 		public function rmWatch($watch_descriptor) {
-			return inotify_rm_watch($watch_descriptor);
+			return inotify_rm_watch($this->handle, $watch_descriptor);
 		}
 		
 	}
