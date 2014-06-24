@@ -11,7 +11,7 @@ A simple OO wrapper for PHP inotify module
 ```php
 <?php
 $inotify = new Djme_Inotify();
-$inotify->addWatch(__DIR__);
+$inotify->addWatch(__DIR__, Djme_Inotify::CREATE);
 while (true) {
   foreach ($inotify->read() as $result) {
     echo 'Something happened to \''. __DIR__. '/'. $result->getName(). "'.\n";
